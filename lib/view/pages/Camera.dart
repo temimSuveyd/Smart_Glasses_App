@@ -23,9 +23,7 @@ class CameraPage extends GetView<CameraControllerImp> {
           actions: [
             IconButton(
                 onPressed: () {
-
 controller.goToBluetoothSettings();
-
                 },
                 icon: const Icon(
                   Icons.bluetooth,
@@ -46,7 +44,16 @@ controller.goToBluetoothSettings();
                       src: Appimages.glassesModel
                 ),),
                 const Spacer(),
-                const Camera_Button(),
+                 GetBuilder<CameraControllerImp>(
+          builder: (controller) => 
+         Camera_Button(
+            onTap: () {
+          controller.startRecording();
+            },
+            color: controller.isRecording == true? Colors.red :  Colors.transparent,
+            iconData:controller.isRecording == false? Icons.camera_alt: Icons.stop_circle  ,
+          ),
+        ),
                 const SizedBox(height: 30)
               ],
             ),

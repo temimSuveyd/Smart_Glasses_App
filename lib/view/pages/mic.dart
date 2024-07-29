@@ -48,10 +48,16 @@ controller.goToBluetoothSettings();
         const
         Spacer(),
         
-        Mic_Button(
-          onTap: () {
-            controller.goToBluetoothSettings();
-          },
+        GetBuilder<MiccontrollerImp>(
+          builder: (controller) => 
+         Mic_Button(
+            onTap: () {
+          controller.startRecording();
+          
+            },
+            color: controller.isRecording == true? Colors.red :  Colors.transparent,
+            iconData:controller.isRecording == false? Icons.mic: Icons.stop_circle  ,
+          ),
         ),
         const
         SizedBox(height: 30)

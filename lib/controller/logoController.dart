@@ -1,5 +1,4 @@
 import 'dart:async';
-import 'dart:developer';
 
 import 'package:get/get.dart';
 import 'package:smart_glass/core/constns/routes.dart';

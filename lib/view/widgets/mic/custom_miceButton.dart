@@ -4,9 +4,11 @@ import 'package:smart_glass/core/constns/colors.dart';
 
 class Mic_Button extends StatelessWidget {
   const Mic_Button({
-    super.key, required this.onTap,
+    super.key, required this.onTap, required this.color, required this.iconData,
   });
 final void Function() onTap;
+final Color color;
+final IconData iconData;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -17,11 +19,12 @@ final void Function() onTap;
         width: 80,
         height: 80,
         decoration: BoxDecoration(
+          color: color,
             borderRadius: BorderRadius.circular(40),
             border: Border.all(color: Appcolors.textColor, width: 3)),
-        child: const Center(
+        child:  Center(
           child: Icon(
-            Icons.mic,
+         iconData,
             size: 40,
           ),
         ),

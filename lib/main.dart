@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:smart_glass/core/services/services.dart';
 import 'package:smart_glass/routes.dart';
-import 'package:smart_glass/view/pages/navigationButtomBar.dart';
+
+
 
 void main()async {
 
@@ -20,6 +21,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
  getPages: getPages,
 debugShowCheckedModeBanner: false,
+
    );
 
     
