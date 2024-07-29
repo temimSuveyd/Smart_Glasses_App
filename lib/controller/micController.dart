@@ -1,16 +1,21 @@
+
+import 'package:app_settings/app_settings.dart';
 import 'package:get/get.dart';
-import 'package:smart_glass/core/constns/routes.dart';
-
 abstract class MicController extends GetxController  {
-  
 
-  goToBluetoothPage();
+  goToBluetoothSettings();
 }
 
 class  MiccontrollerImp extends MicController {
   @override
-  goToBluetoothPage() {
-Get.toNamed(AppRoutes.bluetoothPage);
+  goToBluetoothSettings() {
+
+
+
+
   }
+
+
+
   
 }

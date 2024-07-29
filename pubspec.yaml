@@ -38,9 +38,7 @@ dependencies:
   get: ^4.6.6
   shared_preferences: ^2.2.3
   model_viewer_plus: ^1.8.0
-  flutter_blue: ^0.8.0
-  permission_handler:
-
+  app_settings:
 dev_dependencies:
   flutter_test:
     sdk: flutter

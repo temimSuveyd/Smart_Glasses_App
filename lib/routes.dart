@@ -2,7 +2,6 @@ import 'package:get/get.dart';
 import 'package:smart_glass/core/constns/routes.dart';
 import 'package:smart_glass/core/middleware/middleware.dart';
 import 'package:smart_glass/view/pages/Camera.dart';
-import 'package:smart_glass/view/pages/bluetooth.dart';
 import 'package:smart_glass/view/pages/headphones.dart';
 import 'package:smart_glass/view/pages/mic.dart';
 import 'package:smart_glass/view/pages/navigationButtomBar.dart';
@@ -17,6 +16,5 @@ List<GetPage<dynamic>> getPages = [
   GetPage(name: AppRoutes.cameraPage, page: () => const CameraPage()),
   GetPage(name: AppRoutes.micPage, page: () => const MicPage()),
   GetPage(name: AppRoutes.headphonePage, page: () => const HeadphonesPage()),
-  GetPage(name: AppRoutes.bluetoothPage, page: () => const BluetoothPage()),
-  GetPage(name: AppRoutes.bUttomNavigaionBar, page: () => const BUttomNavigaionBar()),
+  GetPage(name: AppRoutes.bUttomNavigaionBar,page: () => const BUttomNavigaionBar()),
 ];

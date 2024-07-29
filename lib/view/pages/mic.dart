@@ -1,3 +1,4 @@
+import 'package:app_settings/app_settings.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
@@ -23,7 +24,9 @@ class MicPage extends GetView<MiccontrollerImp> {
           ),
           actions: [
             IconButton(
-                onPressed: () {},
+                onPressed: () {
+AppSettings.openAppSettings(type: AppSettingsType.bluetooth);
+                },
                 icon: const Icon(
                   Icons.bluetooth,
                   size: 30,
@@ -47,7 +50,7 @@ class MicPage extends GetView<MiccontrollerImp> {
         
         Mic_Button(
           onTap: () {
-            controller.goToBluetoothPage();
+            controller.goToBluetoothSettings();
           },
         ),
         const
