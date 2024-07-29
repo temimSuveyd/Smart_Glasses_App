@@ -4,16 +4,17 @@ import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 import 'package:model_viewer_plus/model_viewer_plus.dart';
+import 'package:smart_glass/controller/headphonesController.dart';
 import 'package:smart_glass/core/constns/images.dart';
-
-import 'package:smart_glass/view/widgets/camera/custom_Camera_mice_headfonButton.dart';
 import 'package:smart_glass/view/widgets/headphones/custom_headphoneButton.dart';
 
-class HeadphonesPage extends StatelessWidget {
+class HeadphonesPage extends GetView<HeadphonesControllerImp> {
   const HeadphonesPage({super.key});
 
   @override
   Widget build(BuildContext context) {
+    Get.lazyPut(() => HeadphonesControllerImp());
+
     return Scaffold(
         appBar: AppBar(
           title: const Text(
@@ -22,14 +23,16 @@ class HeadphonesPage extends StatelessWidget {
           ),
           actions: [
             IconButton(
-                onPressed: () {},
+                onPressed: () {
+                  controller.goToBluetoothSettings();
+                },
                 icon: const Icon(
                   Icons.bluetooth,
                   size: 30,
                 )),
           ],
         ),
-        body:   Row(
+        body: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Column(
@@ -38,16 +41,12 @@ class HeadphonesPage extends StatelessWidget {
                 SizedBox(
                   width: Get.width * 0.9,
                   height: 400,
-            
-                  child : const ModelViewer(src:Appimages.glassesModel),
+                  child: const ModelViewer(src: Appimages.glassesModel),
                 ),
-        const
-        Spacer(),
-        const
-        Headphone_Button(),
-        const
-        SizedBox(height: 30)
-        ],
+                const Spacer(),
+                const Headphone_Button(),
+                const SizedBox(height: 30)
+              ],
             ),
           ],
         ));

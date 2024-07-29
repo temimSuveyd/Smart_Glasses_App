@@ -25,7 +25,7 @@ class MicPage extends GetView<MiccontrollerImp> {
           actions: [
             IconButton(
                 onPressed: () {
-AppSettings.openAppSettings(type: AppSettingsType.bluetooth);
+controller.goToBluetoothSettings();
                 },
                 icon: const Icon(
                   Icons.bluetooth,

@@ -4,14 +4,16 @@ import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 import 'package:model_viewer_plus/model_viewer_plus.dart';
+import 'package:smart_glass/controller/cameraController.dart';
 import 'package:smart_glass/core/constns/images.dart';
 import 'package:smart_glass/view/widgets/camera/custom_Camera_mice_headfonButton.dart';
 
-class CameraPage extends StatelessWidget {
+class CameraPage extends GetView<CameraControllerImp> {
   const CameraPage({super.key});
 
   @override
   Widget build(BuildContext context) {
+    Get.lazyPut(() => CameraControllerImp());
     return Scaffold(
         appBar: AppBar(
           title: const Text(
@@ -20,7 +22,11 @@ class CameraPage extends StatelessWidget {
           ),
           actions: [
             IconButton(
-                onPressed: () {},
+                onPressed: () {
+
+controller.goToBluetoothSettings();
+
+                },
                 icon: const Icon(
                   Icons.bluetooth,
                   size: 30,

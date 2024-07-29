@@ -1,16 +1,17 @@
 
 import 'package:app_settings/app_settings.dart';
 import 'package:get/get.dart';
-abstract class MicController extends GetxController  {
+abstract class HeadphonesController extends GetxController  {
 
   goToBluetoothSettings();
 }
 
-class  MiccontrollerImp extends MicController {
+class  HeadphonesControllerImp extends HeadphonesController {
   @override
   goToBluetoothSettings() {
 
 AppSettings.openAppSettings(type: AppSettingsType.bluetooth);
+
 
 
   }
